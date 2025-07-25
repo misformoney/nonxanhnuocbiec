@@ -1,0 +1,2263 @@
+/* Disable vertical scrolling */
+html, body {
+  overflow-y: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 1vw;
+}
+
+/* Ensure the canvas occupies full viewport */
+canvas {
+  display: block;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+
+
+
+/* -------------------- Divider L -------------------- */
+/* 3-LINE ENTER */
+/* --------------- Divider M --------------- */
+/* 2-LINE ENTER */
+/* ---------- Divider S ---------- */
+/* 1-LINE ENTER */
+
+
+/* -------------------- Divider L -------------------- */
+/* F01: LOADING SCREEN */
+
+/*02 SCREEN | Loading Screen */
+#loading-screen {
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--bg-dark);
+
+  transition: opacity 1s cubic-bezier(0.85, -0.01, 0.21, 1), visibility 1s cubic cubic-bezier(0.85, -0.01, 0.21, 1);
+}
+
+/* Hide scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* --------------- Divider M --------------- */
+
+/*03 CONTAINER | Lotus */
+.container-lotus {
+  width: 100vw;
+  height: 100vh;
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Divider S ---------- */
+
+/*04 LOTUS WRAPPER | Lotus L -> S */
+.lotus-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+/* 05 | SVG Lotus L */
+#svg-lotus-l {
+  width: 70vw;
+  z-index: 10001;
+
+  opacity: 1;
+  overflow: visible;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 05 | SVG Lotus M */
+#svg-lotus-m {
+  width: 65vw;
+  z-index: 10002;
+
+  opacity: 1;
+  overflow: visible;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 05 | SVG Lotus S */
+#svg-lotus-s {
+  width: 50vw;
+  z-index: 10003;
+
+  opacity: 1;
+  overflow: visible;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* -------------------- ANIMATION Lotus L -> S -------------------- */
+
+/* KHAI BÁO ANIMATION rotateClockwise */
+.rotate-cw {
+  animation: rotateClockwise 8s linear infinite;
+}
+
+/* KEYFRAMES cho rotate liên tục về bên PHẢI (clockwise) */
+@keyframes rotateClockwise {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* --------------- Divider M --------------- */
+
+/* KHAI BÁO ANIMATION rotateCounterClockwise */
+.rotate-ccw {
+  animation: rotateCounterClockwise 6s linear infinite;
+}
+
+/* KEYFRAMES cho rotate liên tục về bên TRÁI */
+@keyframes rotateCounterClockwise {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+/* --------------- Divider M --------------- */
+
+/* KHAI BÁO ANIMATION fadeInScaleUp */
+.animate-in {
+  animation: fadeInScaleUp 1.25s ease-in forwards;
+}
+
+/* KEYFRAMES cho fade in và scale up */
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* --------------- Divider M --------------- */
+
+/* KHAI BÁO ANIMATION fadeOutScaleUp */
+.animate-out {
+  animation: fadeOutScaleUp 5s forwards;
+}
+
+/* KEYFRAMES cho fade out và scale up sau khi load */
+@keyframes fadeOutScaleUp {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(2.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(5);
+  }
+}
+
+/* --------------- Divider M --------------- */
+
+/*03 CONTAINER | Project Logo */
+.container-project-logo {
+  width: fit-content;
+  height: auto;
+  z-index: 0;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*04 SVG | Project Logo */
+#svg-project-logo {
+  width: auto;
+  height: 15rem;
+  z-index: 0;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: var(--neutral-light);
+}
+
+/* -------------------- ANIMATION Project Logo Appear -------------------- */
+
+/* KHAI BÁO ANIMATION projectlogoAppear */
+.project-logo-appear {
+  animation: projectlogoAppear 0.75s ease-in-out;
+}
+
+/* KEYFRAMES cho project logo xuất hiện */
+@keyframes projectlogoAppear {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.75);
+  }
+
+  t0 {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* --------------- Divider M --------------- */
+
+/*03 CONTAINER | Loading Content */
+.container-loading-content {
+  width: fit-content;
+  height: auto;
+  z-index: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  gap: var(--spacing-s);
+  box-sizing: border-box;
+
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/* -------------------- Divider L -------------------- */
+/* F02: AUDIO INSTRUCTION  */
+
+/*02 SCREEN | Audio Instruction Screen */
+#audio-instruction-screen {
+  width: 100vw;
+  height: 100vh;
+  z-index: 900;
+  overflow: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate (0, 0);
+
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--primary);
+
+  transition: transform 0.8s cubic-bezier(0.85, -0.01, 0.21, 1);
+}
+
+/* --------------- Divider M --------------- */
+
+/*03 CONTAINER | Audio Instruction Content */
+.container-audio-instruction-content {
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+
+  transition: opacity 1.5s cubic-bezier(0.85, -0.01, 0.21, 1);
+
+  gap: var(--spacing-m);
+}
+
+/* ---------- Divider S ---------- */
+
+/*04 CONTAINER | Audio Illustration */
+.container-audio-illustration {
+  width: 10rem;
+  height: 10rem;
+
+  position: relative;
+}
+
+/*05 | ELLIPSE | Soundwave L -> M */
+.ellipse-soundwave {
+  border-radius: 100%;
+  position: absolute;
+}
+
+/*05 ELLIPSE | Soundwave L*/
+#ellipse-soundwave-l {
+  width: 10rem;
+  height: 10rem;
+
+  top: 0;
+  left: 0;
+
+  background: radial-gradient(50% 50% at 50% 50%, rgba(247, 248, 248, 0.00) 75%, #F7F8F8 100%);
+}
+
+/*05 ELLIPSE | Soundwave M */
+#ellipse-soundwave-m {
+  width: 8rem;
+  height: 8rem;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: radial-gradient(50% 50% at 50% 50%, rgba(247, 248, 248, 0.00) 75%, #F7F8F8 100%);
+}
+
+/*05 ELLIPSE | Soundwave S */
+#ellipse-soundwave-s {
+  width: 6rem;
+  height: 6rem;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: radial-gradient(50% 50% at 50% 50%, rgba(247, 248, 248, 0.25) 75%, #F7F8F8 100%);
+}
+
+/*05 SVG | Headphone */
+#svg-headphone {
+  width: 3rem;
+  height: 3rem;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ---------- Divider S ---------- */
+
+/*04 FILLED BUTTON | Enter Experience */
+.filled-button-enter-experience {
+  width: 13vw;
+  height: auto;
+  z-index: 902;
+  overflow: hidden;
+
+  position: relative;
+  display: inline-block;
+  padding: 1.25rem 0;
+
+  border-radius: 4rem;
+  border: none;
+  outline: none;
+
+  background-color: var(--neutral-light);
+}
+
+/*05 FILLED BUTTON | BG Dark */
+#filled-button-bg-dark {
+  width: 100%;
+  height: 100%;
+  z-index: 902;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  /* BG Dark bắt đầu bên ngoài phía dưới button */
+
+  background: var(--primary);
+
+  transition: transform 0.6s cubic-bezier(0.85, -0.01, 0.21, 1);
+}
+
+/*05 FILLED BUTTON | CT Light */
+#filled-button-ct-light {
+  z-index: 902;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+
+  color: var(--neutral-light);
+
+  transition: transform 0.6s cubic-bezier(0.85, -0.01, 0.21, 1);
+}
+
+/*05 FILLED BUTTON | CT Dark */
+#filled-button-ct-dark {
+  z-index: 902;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: var(--primary);
+
+  transition: transform 0.6s cubic-bezier(0.85, -0.01, 0.21, 1);
+}
+
+/* -------------------- HOVER ANIMATION for FILLED BUTTON -------------------- */
+
+.filled-button-enter-experience:hover #filled-button-bg-dark {
+  transform: translateY(0);
+  /* BG Dark di chuyển vào vùng nhìn thấy của button */
+}
+
+.filled-button-enter-experience:hover #filled-button-ct-light {
+  transform: translate(-50%, -50%);
+}
+
+.filled-button-enter-experience:hover #filled-button-ct-dark {
+  transform: translate(-50%, 100%);
+}
+
+/* --------------- Divider M --------------- */
+
+/*03 AUDIO INSTRUCTION BG */
+#audio-instruction-bg {
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100vh);
+
+  background: var(--bg-light);
+
+  transition: transform 0.8s cubic-bezier(0.85, -0.01, 0.21, 1);
+}
+
+/* -------------------- ANIMATION Audio Instruction Slide In & Out -------------------- */
+
+#audio-instruction-screen.show #audio-instruction-bg {
+  transform: translateY(0);
+}
+
+#audio-instruction-screen.show .container-audio-instruction-content {
+  opacity: 100%;
+}
+
+#audio-instruction-screen.show #warning-popup {
+  opacity: 100%;
+}
+
+
+
+#audio-instruction-screen.hide {
+  transform: translateY(-100vh);
+}
+
+/* --------------- Divider M --------------- */
+
+/*03 WARNING POPUP | Harware Acceleraion Required */
+#warning-popup {
+  opacity: 0;
+
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+
+  padding: 2rem;
+  gap: var(--spacing-s);
+
+  transition: opacity 1.5s cubic-bezier(0.85, -0.01, 0.21, 1);
+}
+
+/*04 MIXED TEXT BUTTON | View Detailed Instructions */
+.mixed-text-button {
+  gap: var(--spacing-xs);
+
+  transition: gap 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.mixed-text-button:hover {
+  gap: var(--spacing-s);
+}
+
+
+
+
+
+
+
+
+/* -------------------- Divider L -------------------- */
+
+
+/* F03: HOMEPAGE (3js CANVAS)  */
+/*02 SCREEN | Homepage */
+canvas {
+  display: none;
+  position: fixed;
+}
+
+#home-screen {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 500;
+}
+
+
+
+
+#audio-instruction {
+  position: absolute;
+  bottom: 5vh;
+
+}
+
+#scroll-instruction {
+  position: absolute;
+  bottom: 5vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  transition: opacity 0.5s ease;
+}
+
+
+
+
+#scene1Button,
+#scene2Button,
+#scene3Button,
+#scene4Button,
+#scene5Button,
+#scene6Button,
+#audioControlButton {
+  position: relative;
+  z-index: 1000;
+  /* Ensure buttons are on top */
+}
+
+
+.homescreenlogo {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  /*transform: translate(-50%, -50%);*/
+  transition: opacity 0.5s ease;
+}
+
+#svg-home-screen-logo-mini {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  transition: opacity 0.5s ease;
+}
+
+
+/* Set initial scale for the inner frame */
+#svg-icon-button-inner-frame {
+  width: 45px;
+  height: 48px;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+/* Scale up on hover of #openSideNav */
+#openSideNav:hover #svg-icon-button-inner-frame {
+  width: 60px;
+  height: 64px;
+}
+
+#openSideNav {
+  cursor: pointer;
+  position: absolute;
+  right: 60px;
+  top: 60px;
+}
+
+#audioTrigger {
+  right: 50px;
+  bottom: 50px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  position: absolute;
+  cursor: pointer; 
+  z-index: 7000;
+}
+
+#audiobutton {
+  display: flex; /* Enable Flexbox */
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+  position: relative; /* Ensure container is a positioning context */
+}
+
+#svg-icon-button-outer-frame-audio {
+  position: relative;
+}
+
+
+#svg-icon-button-inner-frame-audio {
+  width: 45px;
+  height: 48px;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+/* Scale up on hover of #openSideNav */
+#audioTrigger:hover #svg-icon-button-inner-frame-audio {
+  width: 60px;
+  height: 64px;
+}
+
+#svg-icon-button-outer-frame-audio, #svg-icon-button-inner-frame-audio, .soundwave {
+  position: absolute;
+}
+
+#progress-popup {
+  display: none;
+}
+
+
+/* Side Navigation Initial Style */
+#side-navigation {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  /* Hidden off-screen */
+  width: 100%;
+  /* Adjust width as needed */
+  height: 100%;
+  background-color: #022C31;
+  /* Adjust color as needed */
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  /* Smooth slide-in and slide-out */
+  z-index: 1000;
+  /* Ensure it is above other elements */
+  display: flex;
+
+}
+
+/* Side Navigation Visible State */
+#side-navigation.active {
+  right: 0;
+  /* Bring it into view */
+}
+
+.container-sidenav-01 {
+  width: 400px;
+  position: relative;
+  width: 400px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  top: 30vh;
+}
+
+
+.container-sidenav-02 {
+  width: auto;
+  position: relative;
+  top: -15vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#svg-sidenav-logo {
+  height: 8.75rem;
+  position: relative;
+  left: -30px;
+}
+
+#sidenav-intro {
+  width: 400px;
+}
+
+.container-sidenav-content {
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20vw 0 5vw;
+  z-index: 500;
+  width: 100%;
+  display: flex;
+}
+
+
+
+
+
+#closeSideNav {
+  z-index: 1010;
+  cursor: pointer;
+  position: absolute;
+  top: 70px;
+  right: 70px;
+}
+
+/* Set initial scale for the inner frame */
+#svg-icon-button-inner-frame {
+  width: 45px;
+  height: 48px;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+/* Scale up on hover of #openSideNav */
+#closeSideNav:hover #svg-icon-button-inner-frame {
+  width: 60px;
+  height: 64px;
+}
+
+.sidenav-menu {
+  display: flex;
+  align-items: center;
+  color: var(--neutral-light);
+  gap: 10px;
+  cursor: pointer;
+}
+
+.container-clipping-lotus {
+  position: absolute;
+    z-index: 5;
+    width: 100vw;
+    display: flex;
+    height: 100vh;
+}
+
+#svg-clipping-lotus-l {
+  position: relative;
+  width: 60vw;
+  top: 20vh;
+}
+
+#svg-clipping-lotus-s {
+  position: relative;
+  width: 45vw;
+  bottom: 30vh;
+}
+
+
+.container-diamond-soundwave {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Adjust spacing */
+  position: relative;
+}
+
+.soundwave {
+  animation: waveAnimation 2s infinite;
+  opacity: 0.5; /* Default opacity */
+  transform: scale(0.8);
+}
+
+/* Different animations for different waves */
+#wave1 {
+  animation-delay: 0s;
+  height: 20px;
+  position: absolute;
+  left: -12px;
+  top: -10px;
+}
+#wave2 {
+  animation-delay: 0.2s;
+  height: 20px;
+  position: absolute;
+  left: -7px;
+  top: -10px;
+}
+
+#wave3 {
+  animation-delay: 0.4s;
+  height: 20px;
+  position: absolute;
+  left: -2px;
+  top: -10px;
+}
+#wave4 {
+  animation-delay: 0.6s;
+  height: 20px;
+  position: absolute;
+  left: 4px;
+  top: -10px;
+}
+#wave5 {
+  animation-delay: 0.8s;
+  height: 20px;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+
+/* Original Keyframes for Pulsating */
+@keyframes waveAnimation {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5); /* Scale up */
+  }
+}
+
+
+/* Wave Animation Default State */
+.soundwave {
+  animation: waveAnimation 1s infinite;
+  animation-play-state: running; /* Default to running */
+}
+
+/* Variation: Freeze Everything */
+.freeze-animation .soundwave {
+  animation-play-state: paused; /* Freeze animation */
+}
+
+
+.number-text-box {
+  position: relative;
+  top: -5px;
+}
+
+#playAudioButton {
+  display: none;
+}
+
+
+/* small popuppp */ 
+
+#progress-popup1, #progress-popup2, #progress-popup3, #progress-popup4, #progress-popup5, #progress-popup6 {
+  display: flex;
+  position: absolute;
+  bottom: 100px;
+  right: 25px;
+  z-index: 550;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  transition: max-height 1.5s ease, opacity 1.5s ease;
+  overflow-y: hidden;
+}
+
+#progress-popup1, #progress-popup1-h4, #progress-popup1-p, #openOverlay01, 
+#progress-popup2, #progress-popup2-h4, #progress-popup2-p, #openOverlay02, 
+#progress-popup3, #progress-popup3-h4, #progress-popup3-p, #openOverlay03, 
+#progress-popup4, #progress-popup4-h4, #progress-popup4-p, #openOverlay04, 
+#progress-popup5, #progress-popup5-h4, #progress-popup5-p, #openOverlay05, 
+#progress-popup6, #progress-popup6-h4, #progress-popup5-p, #openOverlay06
+{
+  display: none;
+  cursor: pointer;
+}
+
+
+.overlay {
+  display: none;
+  overflow-y: hidden;
+}
+
+#overlay-01, #overlay-02, #overlay-03, #overlay-04, #overlay-05, #overlay-06 {
+  display: flex;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5000;
+    position: fixed;
+    backdrop-filter: blur(2px);
+    overflow-y: hidden; 
+    background: linear-gradient(180deg, #022c31, rgba(7, 39, 34, 0.8) 50%, rgba(7, 39, 34, 0.95) 75%, #022c31)
+}
+
+.img-corner-patter {
+  position: absolute;
+  width: 100vw;
+}
+
+
+.overlay-ct {
+  display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+    width: 34vw;
+}
+
+.body-l p {
+  margin: 0;
+}
+
+#closeOverlay01, #closeOverlay02, #closeOverlay03, #closeOverlay04, #closeOverlay05, #closeOverlay06 {
+  cursor: pointer;
+  position: absolute;
+  bottom: 50px;
+  right: 150px;
+}
+
+.container-kv-lettering {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.container-kv-illustration {
+  width: auto;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25vw;
+  position: relative;
+  top: -2vw;
+}
+
+.container-overlay-graphic {
+  right: 250px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 6vw;
+  top: 200px;
+}
+
+
+.illustration-frame {
+   position: absolute;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  transition: bottom 0.5s ease;
+}
+
+.overlay.show {
+  bottom: 0;
+}
+
+.al-02.bg-popup {
+  overflow-y: hidden;
+}
+
+/* Example for overlays */
+.overlay, .popup {
+  max-height: 100vh;
+  overflow-y: hidden; /* Allows internal scrolling if content exceeds */
+}
+
+
+
+
+/* Disable vertical scrolling */
+html, body {
+  overflow-y: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure the canvas occupies full viewport */
+canvas {
+  display: block;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+
+
+
+/* -------------------- Divider L -------------------- */
+/* 3-LINE ENTER */
+/* --------------- Divider M --------------- */
+/* 2-LINE ENTER */
+/* ---------- Divider S ---------- */
+/* 1-LINE ENTER */
+
+
+/* -------------------- Divider L -------------------- */
+/* F01: LOADING SCREEN */
+
+/*02 SCREEN | Loading Screen */
+#loading-screen {
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--bg-dark);
+
+  transition: opacity 1s cubic-bezier(0.85, -0.01, 0.21, 1), visibility 1s cubic cubic-bezier(0.85, -0.01, 0.21, 1);
+}
+
+/* Hide scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* --------------- Divider M --------------- */
+
+/*03 CONTAINER | Lotus */
+.container-lotus {
+  width: 100vw;
+  height: 100vh;
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Divider S ---------- */
+
+/*04 LOTUS WRAPPER | Lotus L -> S */
+.lotus-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+/* 05 | SVG Lotus L */
+#svg-lotus-l {
+  width: 70vw;
+  z-index: 10001;
+
+  opacity: 1;
+  overflow: visible;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 05 | SVG Lotus M */
+#svg-lotus-m {
+  width: 65vw;
+  z-index: 10002;
+
+  opacity: 1;
+  overflow: visible;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 05 | SVG Lotus S */
+#svg-lotus-s {
+  width: 50vw;
+  z-index: 10003;
+
+  opacity: 1;
+  overflow: visible;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* -------------------- ANIMATION Lotus L -> S -------------------- */
+
+/* KHAI BÁO ANIMATION rotateClockwise */
+.rotate-cw {
+  animation: rotateClockwise 8s linear infinite;
+}
+
+/* KEYFRAMES cho rotate liên tục về bên PHẢI (clockwise) */
+@keyframes rotateClockwise {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* --------------- Divider M --------------- */
+
+/* KHAI BÁO ANIMATION rotateCounterClockwise */
+.rotate-ccw {
+  animation: rotateCounterClockwise 6s linear infinite;
+}
+
+/* KEYFRAMES cho rotate liên tục về bên TRÁI */
+@keyframes rotateCounterClockwise {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+/* --------------- Divider M --------------- */
+
+/* KHAI BÁO ANIMATION fadeInScaleUp */
+.animate-in {
+  animation: fadeInScaleUp 1.25s ease-in forwards;
+}
+
+/* KEYFRAMES cho fade in và scale up */
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* --------------- Divider M --------------- */
+
+/* KHAI BÁO ANIMATION fadeOutScaleUp */
+.animate-out {
+  animation: fadeOutScaleUp 5s forwards;
+}
+
+/* KEYFRAMES cho fade out và scale up sau khi load */
+@keyframes fadeOutScaleUp {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(2.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(5);
+  }
+}
+
+/* --------------- Divider M --------------- */
+
+/*03 CONTAINER | Project Logo */
+.container-project-logo {
+  width: fit-content;
+  height: auto;
+  z-index: 0;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*04 SVG | Project Logo */
+#svg-project-logo {
+  width: auto;
+  height: 15rem;
+  z-index: 0;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: var(--neutral-light);
+}
+
+/* -------------------- ANIMATION Project Logo Appear -------------------- */
+
+/* KHAI BÁO ANIMATION projectlogoAppear */
+.project-logo-appear {
+  animation: projectlogoAppear 0.75s ease-in-out;
+}
+
+/* KEYFRAMES cho project logo xuất hiện */
+@keyframes projectlogoAppear {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.75);
+  }
+
+  t0 {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* --------------- Divider M --------------- */
+
+/*03 CONTAINER | Loading Content */
+.container-loading-content {
+  width: fit-content;
+  height: auto;
+  z-index: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  gap: var(--spacing-s);
+  box-sizing: border-box;
+
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/* -------------------- Divider L -------------------- */
+/* F02: AUDIO INSTRUCTION  */
+
+/*02 SCREEN | Audio Instruction Screen */
+#audio-instruction-screen {
+  width: 100vw;
+  height: 100vh;
+  z-index: 900;
+  overflow: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate (0, 0);
+
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--primary);
+
+  transition: transform 0.8s cubic-bezier(0.85, -0.01, 0.21, 1);
+}
+
+/* --------------- Divider M --------------- */
+
+/*03 CONTAINER | Audio Instruction Content */
+.container-audio-instruction-content {
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+
+  transition: opacity 1.5s cubic-bezier(0.85, -0.01, 0.21, 1);
+
+  gap: var(--spacing-m);
+}
+
+/* ---------- Divider S ---------- */
+
+/*04 CONTAINER | Audio Illustration */
+.container-audio-illustration {
+  width: 10rem;
+  height: 10rem;
+
+  position: relative;
+}
+
+/*05 | ELLIPSE | Soundwave L -> M */
+.ellipse-soundwave {
+  border-radius: 100%;
+  position: absolute;
+}
+
+/*05 ELLIPSE | Soundwave L*/
+#ellipse-soundwave-l {
+  width: 10rem;
+  height: 10rem;
+
+  top: 0;
+  left: 0;
+
+  background: radial-gradient(50% 50% at 50% 50%, rgba(247, 248, 248, 0.00) 75%, #F7F8F8 100%);
+}
+
+/*05 ELLIPSE | Soundwave M */
+#ellipse-soundwave-m {
+  width: 8rem;
+  height: 8rem;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: radial-gradient(50% 50% at 50% 50%, rgba(247, 248, 248, 0.00) 75%, #F7F8F8 100%);
+}
+
+/*05 ELLIPSE | Soundwave S */
+#ellipse-soundwave-s {
+  width: 6rem;
+  height: 6rem;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: radial-gradient(50% 50% at 50% 50%, rgba(247, 248, 248, 0.25) 75%, #F7F8F8 100%);
+}
+
+/*05 SVG | Headphone */
+#svg-headphone {
+  width: 3rem;
+  height: 3rem;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ---------- Divider S ---------- */
+
+/*04 FILLED BUTTON | Enter Experience */
+.filled-button-enter-experience {
+  width: 13vw;
+  height: auto;
+  z-index: 902;
+  overflow: hidden;
+
+  position: relative;
+  display: inline-block;
+  padding: 1.25rem 0;
+
+  border-radius: 4rem;
+  border: none;
+  outline: none;
+
+  background-color: var(--neutral-light);
+}
+
+/*05 FILLED BUTTON | BG Dark */
+#filled-button-bg-dark {
+  width: 100%;
+  height: 100%;
+  z-index: 902;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  /* BG Dark bắt đầu bên ngoài phía dưới button */
+
+  background: var(--primary);
+
+  transition: transform 0.6s cubic-bezier(0.85, -0.01, 0.21, 1);
+}
+
+/*05 FILLED BUTTON | CT Light */
+#filled-button-ct-light {
+  z-index: 902;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+
+  color: var(--neutral-light);
+
+  transition: transform 0.6s cubic-bezier(0.85, -0.01, 0.21, 1);
+}
+
+/*05 FILLED BUTTON | CT Dark */
+#filled-button-ct-dark {
+  z-index: 902;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: var(--primary);
+
+  transition: transform 0.6s cubic-bezier(0.85, -0.01, 0.21, 1);
+}
+
+/* -------------------- HOVER ANIMATION for FILLED BUTTON -------------------- */
+
+.filled-button-enter-experience:hover #filled-button-bg-dark {
+  transform: translateY(0);
+  /* BG Dark di chuyển vào vùng nhìn thấy của button */
+}
+
+.filled-button-enter-experience:hover #filled-button-ct-light {
+  transform: translate(-50%, -50%);
+}
+
+.filled-button-enter-experience:hover #filled-button-ct-dark {
+  transform: translate(-50%, 100%);
+}
+
+/* --------------- Divider M --------------- */
+
+/*03 AUDIO INSTRUCTION BG */
+#audio-instruction-bg {
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100vh);
+
+  background: var(--bg-light);
+
+  transition: transform 0.8s cubic-bezier(0.85, -0.01, 0.21, 1);
+}
+
+/* -------------------- ANIMATION Audio Instruction Slide In & Out -------------------- */
+
+#audio-instruction-screen.show #audio-instruction-bg {
+  transform: translateY(0);
+}
+
+#audio-instruction-screen.show .container-audio-instruction-content {
+  opacity: 100%;
+}
+
+#audio-instruction-screen.show #warning-popup {
+  opacity: 100%;
+}
+
+
+
+#audio-instruction-screen.hide {
+  transform: translateY(-100vh);
+}
+
+/* --------------- Divider M --------------- */
+
+/*03 WARNING POPUP | Harware Acceleraion Required */
+#warning-popup {
+  opacity: 0;
+
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+
+  padding: 2rem;
+  gap: var(--spacing-s);
+
+  transition: opacity 1.5s cubic-bezier(0.85, -0.01, 0.21, 1);
+}
+
+/*04 MIXED TEXT BUTTON | View Detailed Instructions */
+.mixed-text-button {
+  gap: var(--spacing-xs);
+
+  transition: gap 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.mixed-text-button:hover {
+  gap: var(--spacing-s);
+}
+
+
+
+
+
+
+
+
+/* -------------------- Divider L -------------------- */
+
+
+/* F03: HOMEPAGE (3js CANVAS)  */
+/*02 SCREEN | Homepage */
+canvas {
+  display: none;
+  position: fixed;
+}
+
+#home-screen {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 500;
+}
+
+
+
+
+#audio-instruction {
+  position: absolute;
+  bottom: 5vh;
+
+}
+
+#scroll-instruction {
+  position: absolute;
+  bottom: 5vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  transition: opacity 0.5s ease;
+}
+
+
+
+
+#scene1Button,
+#scene2Button,
+#scene3Button,
+#scene4Button,
+#scene5Button,
+#scene6Button,
+#audioControlButton {
+  position: relative;
+  z-index: 1000;
+  /* Ensure buttons are on top */
+}
+
+
+.homescreenlogo {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  /*transform: translate(-50%, -50%);*/
+  transition: opacity 0.5s ease;
+}
+
+#svg-home-screen-logo-mini {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  transition: opacity 0.5s ease;
+}
+
+
+/* Set initial scale for the inner frame */
+#svg-icon-button-inner-frame {
+  width: 45px;
+  height: 48px;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+/* Scale up on hover of #openSideNav */
+#openSideNav:hover #svg-icon-button-inner-frame {
+  width: 60px;
+  height: 64px;
+}
+
+#openSideNav {
+  cursor: pointer;
+  position: absolute;
+  right: 60px;
+  top: 60px;
+}
+
+#audioTrigger {
+  right: 50px;
+  bottom: 50px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  position: absolute;
+  cursor: pointer; 
+  z-index: 7000;
+}
+
+#audiobutton {
+  display: flex; /* Enable Flexbox */
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+  position: relative; /* Ensure container is a positioning context */
+}
+
+#svg-icon-button-outer-frame-audio {
+  position: relative;
+}
+
+
+#svg-icon-button-inner-frame-audio {
+  width: 45px;
+  height: 48px;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+/* Scale up on hover of #openSideNav */
+#audioTrigger:hover #svg-icon-button-inner-frame-audio {
+  width: 60px;
+  height: 64px;
+}
+
+#svg-icon-button-outer-frame-audio, #svg-icon-button-inner-frame-audio, .soundwave {
+  position: absolute;
+}
+
+#progress-popup {
+  display: none;
+}
+
+
+/* Side Navigation Initial Style */
+#side-navigation {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  /* Hidden off-screen */
+  width: 100%;
+  /* Adjust width as needed */
+  height: 100%;
+  background-color: #022C31;
+  /* Adjust color as needed */
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  /* Smooth slide-in and slide-out */
+  z-index: 1000;
+  /* Ensure it is above other elements */
+  display: flex;
+
+}
+
+/* Side Navigation Visible State */
+#side-navigation.active {
+  right: 0;
+  /* Bring it into view */
+}
+
+.container-sidenav-01 {
+  width: 400px;
+  position: relative;
+  width: 400px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  top: 30vh;
+}
+
+
+.container-sidenav-02 {
+  width: auto;
+  position: relative;
+  top: -15vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#svg-sidenav-logo {
+  height: 8.75rem;
+  position: relative;
+  left: -30px;
+}
+
+#sidenav-intro {
+  width: 400px;
+}
+
+.container-sidenav-content {
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20vw 0 5vw;
+  z-index: 500;
+  width: 100%;
+  display: flex;
+}
+
+
+
+
+
+#closeSideNav {
+  z-index: 1010;
+  cursor: pointer;
+  position: absolute;
+  top: 70px;
+  right: 70px;
+}
+
+/* Set initial scale for the inner frame */
+#svg-icon-button-inner-frame {
+  width: 45px;
+  height: 48px;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+/* Scale up on hover of #openSideNav */
+#closeSideNav:hover #svg-icon-button-inner-frame {
+  width: 60px;
+  height: 64px;
+}
+
+.sidenav-menu {
+  display: flex;
+  align-items: center;
+  color: var(--neutral-light);
+  gap: 10px;
+  cursor: pointer;
+}
+
+.container-clipping-lotus {
+  position: absolute;
+    z-index: 5;
+    width: 100vw;
+    display: flex;
+    height: 100vh;
+}
+
+#svg-clipping-lotus-l {
+  position: relative;
+  width: 60vw;
+  top: 20vh;
+}
+
+#svg-clipping-lotus-s {
+  position: relative;
+  width: 45vw;
+  bottom: 30vh;
+}
+
+
+.container-diamond-soundwave {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Adjust spacing */
+  position: relative;
+}
+
+.soundwave {
+  animation: waveAnimation 2s infinite;
+  opacity: 0.5; /* Default opacity */
+  transform: scale(0.8);
+}
+
+/* Different animations for different waves */
+#wave1 {
+  animation-delay: 0s;
+  height: 20px;
+  position: absolute;
+  left: -12px;
+  top: -10px;
+}
+#wave2 {
+  animation-delay: 0.2s;
+  height: 20px;
+  position: absolute;
+  left: -7px;
+  top: -10px;
+}
+
+#wave3 {
+  animation-delay: 0.4s;
+  height: 20px;
+  position: absolute;
+  left: -2px;
+  top: -10px;
+}
+#wave4 {
+  animation-delay: 0.6s;
+  height: 20px;
+  position: absolute;
+  left: 4px;
+  top: -10px;
+}
+#wave5 {
+  animation-delay: 0.8s;
+  height: 20px;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+
+/* Original Keyframes for Pulsating */
+@keyframes waveAnimation {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5); /* Scale up */
+  }
+}
+
+
+/* Wave Animation Default State */
+.soundwave {
+  animation: waveAnimation 1s infinite;
+  animation-play-state: running; /* Default to running */
+}
+
+/* Variation: Freeze Everything */
+.freeze-animation .soundwave {
+  animation-play-state: paused; /* Freeze animation */
+}
+
+
+.number-text-box {
+  position: relative;
+  top: -5px;
+}
+
+#playAudioButton {
+  display: none;
+}
+
+
+/* small popuppp */ 
+
+#progress-popup1, #progress-popup2, #progress-popup3, #progress-popup4, #progress-popup5, #progress-popup6 {
+  display: flex;
+  position: absolute;
+  bottom: 100px;
+  right: 25px;
+  z-index: 500;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  transition: max-height 1.5s ease, opacity 1.5s ease;
+  overflow-y: hidden;
+}
+
+#progress-popup1, #progress-popup1-h4, #progress-popup1-p, #openOverlay01, 
+#progress-popup2, #progress-popup2-h4, #progress-popup2-p, #openOverlay02, 
+#progress-popup3, #progress-popup3-h4, #progress-popup3-p, #openOverlay03, 
+#progress-popup4, #progress-popup4-h4, #progress-popup4-p, #openOverlay04, 
+#progress-popup5, #progress-popup5-h4, #progress-popup5-p, #openOverlay05, 
+#progress-popup6, #progress-popup6-h4, #progress-popup5-p, #openOverlay06
+{
+  display: none;
+  cursor: pointer;
+}
+
+
+.overlay {
+  display: none;
+  overflow-y: hidden;
+}
+
+#overlay-01, #overlay-02, #overlay-03, #overlay-04, #overlay-05, #overlay-06 {
+  display: flex;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5000;
+    position: fixed;
+    backdrop-filter: blur(2px);
+    overflow-y: hidden; 
+    background: linear-gradient(180deg, #022c31, rgba(7, 39, 34, 0.8) 50%, rgba(7, 39, 34, 0.95) 75%, #022c31)
+}
+
+.img-corner-patter {
+  position: absolute;
+  width: 100vw;
+}
+
+
+.container-overlay-content {
+  display: block;
+  position: absolute;
+  width: 50vw;
+  top: 25vh;
+  height: 100vh;
+  font-family: "Be Vietnam Pro", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: -0.0125rem;
+  color: var(--neutral-light);
+  left: 30vh;
+}
+
+.overlay-ct {
+  display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 2rem 0;
+    width: 34vw;
+}
+
+.body-l p {
+  margin: 0;
+}
+
+#closeOverlay01, #closeOverlay02, #closeOverlay03, #closeOverlay04, #closeOverlay05, #closeOverlay06 {
+  cursor: pointer;
+  position: absolute;
+  bottom: 50px;
+  right: 100px;
+}
+
+.container-kv-lettering {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-kv-illustration {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
+
+
+.container-kv-lettering svg {
+  width: 20vw;
+  }
+
+
+.img-kv-illustration {
+  height: 300px;
+  width: auto;
+  position: absolute;
+}
+
+.illustration-frame svg {
+   height: 330px;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  transition: bottom 0.5s ease;
+}
+
+.overlay.show {
+  bottom: 0;
+}
+
+.al-02.bg-popup {
+  overflow-y: hidden;
+}
+
+/* Example for overlays */
+.overlay, .popup {
+  max-height: 100vh;
+  overflow-y: hidden; /* Allows internal scrolling if content exceeds */
+}
+
+
+#popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 30000;
+}
+
+#popup {
+  font-size: medium;
+  color: #F7F8F8;
+  background-color: #022C31;
+  padding: 40px;
+  border-radius: 5px;
+  text-align: left;
+  max-width: 50%;
+  overflow: auto;
+  position: relative;
+}
+
+#close-popup {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 32px;
+  position: absolute;
+  right: 25px;
+  top: 10px;
+}
+
+#svg-home-screen-logo-mini {
+  cursor: pointer;
+}
+
+#popup img {
+  width: 50px;
+}
+
+
+
+
+/* Extra Large Devices (24-Inch Desktops) */
+@media (min-width: 1600px)  {
+
+ 
+  
+  .container-overlay-content {
+    top: 0;
+    left: 26vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-kv-illustration {
+  margin-top: 10vh;
+  position: relative;
+  top: 10vw;
+}
+
+
+.container-overlay-graphic {
+  right: 250px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 6vw;
+  top: 200px;
+}
+
+
+.container-kv-lettering svg {
+  width: 40vw;
+  }
+
+
+.img-kv-illustration {
+  height: 450px;
+  width: auto;
+  position: absolute;
+  top: -20vw;
+}
+
+.illustration-frame svg {
+   height: 480px;
+   position: relative;
+   top: -13.25vw;
+}
+
+
+
+#DongXam-content {
+  width: 60vh;
+}
+
+.overlay-content-category {
+  margin-bottom: 0.5rem;
+}
+
+
+#svg-lettering-fill-2, #svg-lettering-fill-4 {
+  width: 55vh;
+}
+
+#svg-lettering-fill-4 {
+  position: relative;
+  top: 1vh;
+}
+
+#svg-lettering-fill-5 {
+  position: relative;
+  top: 2vh
+}
+
+#svg-lettering-fill-6 {
+  height: 27vh;
+  position: relative;
+  top: 3vh
+}
+
+
+
+}
+
+/* Large Devices (16-Inch Desktops) */
+@media (min-width: 1200px) and (max-width: 1370px) {
+  .container-sidenav-01 {
+    top: 20vh;
+  }
+
+  .container-sidenav-02 {
+    width: auto;
+    position: relative;
+    top: -5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .overlay-ct {
+    width: 40vw;
+    margin-bottom: 1.5rem;
+    gap: 25px;
+}
+
+#overlay-ct-location {
+  gap: 25px;
+
+}
+
+  .body-l {
+    font-size: 1.35vw;
+  }
+
+  .heading-m {
+    font-size: 1.9rem;
+  }
+
+  .heading-s {
+    font-size: 1.25rem;
+    margin-top: 1vw;
+  }
+
+  .container-overlay-content {
+    top: 0;
+    left: 22vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+  .container-kv-illustration {
+    margin-top: 18vh;
+    height: 55vh;
+    margin-top: 10vh;
+  position: relative;
+  top: -5vw;
+}
+
+.container-overlay-graphic {
+  right: 13vh;
+  top: -6vh;
+}
+
+.img-kv-illustration {
+  height: 380px;
+  width: auto;
+  position: absolute;
+}
+
+
+.container-kv-lettering svg {
+
+width: 38vh;
+}
+
+#DongXam-content {
+  width: 60vh;
+}
+
+.overlay-content-category {
+  margin-bottom: 0.5rem;
+}
+
+.illustration-frame svg {
+  height: 410px;
+}
+
+#svg-lettering-fill-2, #svg-lettering-fill-4 {
+  width: 55vh;
+}
+
+#svg-lettering-fill-6 {
+  width: 35vh;
+}
+
+
+#closeOverlay01, #closeOverlay02, #closeOverlay03, #closeOverlay04, #closeOverlay05, #closeOverlay06 {
+  cursor: pointer;
+  position: absolute;
+  bottom: 9vh;
+  right: 10vh;
+}
+
+.icon-wrapper {
+  width: 3rem;
+  height: 1rem;
+  display: flex
+;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.instruction-s {
+  font-family: "Be Vietnam Pro", serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 0;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+
+}
+
+
+
+@media screen and (max-device-width: 1200px) {
+
+  
+
+
+
+
+}

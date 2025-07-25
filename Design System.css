@@ -1,0 +1,389 @@
+/* -------------------- Divider L -------------------- */ /* 3-LINE ENTER */
+/* --------------- Divider M --------------- */ /* 2-LINE ENTER */
+/* ---------- Divider S ---------- */ /* 1-LINE ENTER */
+
+/* LOAD TYPEFACE SACVIET */
+@font-face {
+    font-family: SacViet;
+    src: url(SacViet.otf);
+  }
+
+
+  
+/* -------------------- Divider L -------------------- */
+/* DESIGN SYSTEM 01 | Typography */
+
+
+
+/* --------------- Divider M --------------- */
+/* 01.1 | Heading */
+
+
+/* HEADING EXTRA LARGE -> Loading Content */
+.heading-xl {
+  font-family: SacViet;
+  font-size: 4rem;
+  font-weight: 400;
+
+
+  line-height: 0;
+  letter-spacing: 0;
+  
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ---------- Divider S ---------- */
+
+/* HEADING LARGE -> Page Heading, Side Navigation */
+.heading-l {
+  font-family: SacViet;
+  font-size: 2rem;
+  font-weight: 400;
+
+  line-height: 0;
+  letter-spacing: 0;
+
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ---------- Divider S ---------- */
+
+/* HEADING MEDIUM -> Overlay Heading */
+.heading-m  {
+  font-family: SacViet;
+  font-size: 2.15rem;
+  font-weight: 400;
+  
+  line-height: 0;
+  letter-spacing: 0;
+
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ---------- Divider S ---------- */
+
+/* HEADING SMALL -> Overlay Sub-heading */
+.heading-s {
+  font-family: SacViet;
+  font-size: 1.25rem;
+  font-weight: 400;
+
+  line-height: 0;
+  letter-spacing: 0;
+
+  white-space: nowrap;
+}
+
+.heading-s2 {
+  font-family: SacViet;
+  font-size: 1.25rem;
+  font-weight: 400;
+
+  line-height: 0;
+  letter-spacing: 0;
+
+  white-space: nowrap;
+  opacity: 0.5;
+}
+
+
+/* --------------- Divider M --------------- */
+/* 01.2 | Body */
+
+/* BODY LARGE -> Normal Paragragh */
+.body-l {
+  font-family: "Be Vietnam Pro", serif;
+  font-size: 1rem;
+  font-weight: 400;
+
+  line-height: 140%;
+  letter-spacing: -0.0125rem;
+}
+
+/* ---------- Divider S ---------- */
+
+/* BODY SMALL -> Pop-up Content */ 
+.body-s {
+  font-family: "Be Vietnam Pro", serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+
+  line-height: 140%;
+  letter-spacing: 0;
+}
+
+
+/* --------------- Divider M --------------- */
+/* 01.3 | Instruction */
+
+
+/* INSTRUCTION LARGE -> Loading & Scroll Instruction */
+.instruction-l {
+  font-family: "Be Vietnam Pro", serif;
+  font-size: 1rem;
+  font-weight: 400;
+
+  line-height: 0;
+  letter-spacing: 0.1rem;
+  
+  text-transform: uppercase;
+}
+
+/* ---------- Divider S ---------- */
+
+/* INSTRUCTION SMALL -> Text Button, Overlay Content Category */
+.instruction-s {
+  font-family: "Be Vietnam Pro", serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  line-height: 0;
+  letter-spacing: 0.1rem;
+
+  text-transform: uppercase;
+}
+
+
+
+/* -------------------- Divider L -------------------- */
+/* DESIGN SYSTEM 02 | Color & Stroke */
+
+
+
+/* --------------- Divider M --------------- */
+/* 02.1 | BG Fill */
+
+
+:root {
+
+  /* ---------- Text Fill ---------- */
+  --primary: #022C31;
+  --neutral-light: #f5f5f5;
+
+  /* ---------- Normal Background ---------- */
+  --bg-dark: #022C31;
+  --bg-light: linear-gradient(180deg, #D6F5E8 0%, #A0E5CB 100%);
+
+  /* ---------- Overlay Background ---------- */
+  --bg-overlay: linear-gradient(180deg, #022C31 0%, rgba(7, 39, 34, 0.80) 25%, rgba(7, 39, 34, 0.80) 75.06%, #022C31 100%);
+  
+  /* ---------- Popup Background ---------- */
+  --bg-popup: rgba(2, 44, 49, 0.05);
+
+}
+
+
+/* --------------- Divider M --------------- */
+/* 02.2 | BG Overlay */
+
+
+.bg-overlay {
+
+  /* Fill */
+  background: var(--bg-overlay);
+
+  /* Effect */
+  backdrop-filter: blur(12.5px);
+
+}
+
+
+/* --------------- Divider M --------------- */
+/* 02.3 | BG Overlay */
+
+
+.bg-popup01 {
+
+  /* Fill */
+  background-color: var(--bg-popup);
+  background-blend-mode: overlay;
+
+  /*Stroke & Border Radius */
+  border: 1px solid rgba(2, 44, 49, 0.5);
+  border-radius: 1rem;
+
+  /* Effects */
+  box-shadow: -4px -4px 10px 0px rgba(2, 44, 49, 0.50) inset, 4px 4px 10px 0px rgba(2, 44, 49, 0.25) inset, 1px 2px 4px 0px rgba(2, 44, 49, 0.25) inset;
+  backdrop-filter: blur(12.5px);
+
+}
+
+.bg-popup {
+
+  /* Fill */
+  background-color: var(--bg-popup);
+  background-blend-mode: overlay;
+
+  /*Stroke & Border Radius */
+  border: 1px solid rgba(2, 44, 49, 0.5);
+  border-radius: 1rem;
+
+  /* Effects */
+  box-shadow: -4px -4px 10px 0px rgba(2, 44, 49, 0.50) inset, 4px 4px 10px 0px rgba(2, 44, 49, 0.25) inset, 1px 2px 4px 0px rgba(2, 44, 49, 0.25) inset;
+  backdrop-filter: blur(12.5px);
+
+}
+
+
+/* -------------------- Divider L -------------------- */
+/* DESIGN SYSTEM 03 | Spacing & Auto Layout */
+
+
+/* --------------- Divider M --------------- */
+/* 03.1 | Spacing */
+
+
+:root {
+
+  /* SPACING EXTRA LARGE -> Side Navigation Menu */
+  --spacing-xl: 3rem;
+
+  /* SPACING LARGE -> Section */
+  --spacing-l: 2rem;
+
+  /* SPACING MEDIUM -> Heading vs Body LARGE */
+  --spacing-m: 1.5rem;
+
+  /* SPACING SMALL -> Heading vs Body SMALL */
+  --spacing-s: 1rem;
+  
+  /* SPACING EXTRA SMALL -> Auto Layout */
+  --spacing-xs: 0.5rem;
+  
+
+}
+
+
+/* --------------- Divider M --------------- */
+/* 03.2 | Auto Layout 01 */
+
+.al-01 {
+
+  /* AUTO LAYOUT */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  /* ALIGNMENT */
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+/* --------------- Divider M --------------- */
+/* 03.3 | Auto Layout 02 */
+
+.al-02 {
+
+  /* AUTO LAYOUT */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  /* ALIGNMENT */
+  align-items: flex-start;
+  justify-content: flex-start;
+  
+}
+
+
+/* --------------- Divider M --------------- */
+/* 03.4 | Auto Layout 03 */
+
+.al-03 {
+
+  /* AUTO LAYOUT */
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+
+  /* ALIGNMENT */
+  align-items: center;
+  justify-content: flex-start;
+  
+}
+
+
+/* --------------- Divider M --------------- */
+/* 03.4 | Auto Layout 03 -> Overlay Content Category */
+.al-ovl-content-category {
+
+  /* AUTO LAYOUT */
+  display: flex;
+  
+  /* ALIGNMENT */
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+
+  /* PADDING & MARGIN */
+  padding: 0.3125rem 0.625rem;
+
+  /* DECORATION */
+  border-left: 2px solid var(--neutral-light);
+}
+
+
+/* --------------- Divider M --------------- */
+/* 03.5 | Icon Wrapper */
+.icon-wrapper {
+  width: 1rem;
+  height: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button svg  {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} 
+
+.icon-button :hover #svg-icon-button-inner-frame {
+  width: 60px;
+  height: 64px;
+}
+
+.homescreenlogo  {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} 
+
+#openSideNav {
+    position: absolute;
+    right: 4.75vw;
+    top: 3.5vw;
+}
+
+#audioTrigger {
+  position: absolute;
+    right: 4.75vw;
+    bottom: 3.5vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
